@@ -5,7 +5,15 @@ import java.util.{ Date ⇒ JDate, Calendar ⇒ JCalendar }
 object common {
   type Amount = BigDecimal
 
-  def today = JCalendar.getInstance.getTime
+  def today = {
+    val cal = JCalendar.getInstance
+    cal.setTime(JCalendar.getInstance.getTime)
+    cal.set(JCalendar.HOUR_OF_DAY, 0)
+    cal.set(JCalendar.MINUTE, 0)
+    cal.set(JCalendar.SECOND, 0)
+    cal.set(JCalendar.MILLISECOND, 0)
+    cal.getTime
+  }
 }
 
 import common._

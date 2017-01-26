@@ -10,8 +10,9 @@ lazy val commonSettings = Seq(
   licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0")),
  // addCompilerPlugin("org.spire-math" %% "kind-projector"  % "0.8.0"),
   libraryDependencies ++= Seq(
-      "org.scalaz"                   %% "scalaz-core"                   % "7.2.4",
-      "org.scalaz"                   %% "scalaz-concurrent"             % "7.2.4",
+     // "org.scalaz"                   %% "scalaz-core"                   % "7.2.4",
+     // "org.scalaz"                   %% "scalaz-concurrent"             % "7.2.4",
+     "org.typelevel" %% "cats" % "0.9.0",
       "joda-time"                     % "joda-time"                     % "2.9.1",
       "org.joda"                      % "joda-convert"                  % "1.8.1",
       "io.spray"                     %% "spray-json"                    % "1.3.2",
